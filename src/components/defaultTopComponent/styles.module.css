@@ -85,9 +85,35 @@
 }
 
 .ShoppingButtonContainer {
+    display: flex;
     width: 98px;
     height: 50px;
     border-radius: 4px;
     margin-left: 16px;
     background-color:#0045F3;
+    align-items: center;
+}
+
+.ShoppingButtonContainer img {
+    margin-left: 12px;
+}
+
+.ItemShoppingCounterContainer {
+    display: flex;
+    width:32px;
+    height: 32px;
+    border-radius: 44px;
+    margin-left: 6px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.ItemShoppingCounterContainer p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    height: 600;
+    color: #FFFFFF;
 }

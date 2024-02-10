@@ -21,7 +21,10 @@ export const DefaultTopComponent = () => {
                     </div>
                     <p className={styles.EnterText}>Entrar</p>
                     <div className={styles.ShoppingButtonContainer}>
-
+                        <img src="/assets/images/shop-fill-icon.png"/>
+                        <div className={styles.ItemShoppingCounterContainer}>
+                            <p>0</p>
+                        </div>
                     </div>
                 </div>
             </div>
