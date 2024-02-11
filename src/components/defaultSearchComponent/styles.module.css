@@ -1,0 +1,67 @@
+
+.MainContainer {
+    display: flex;
+    width: 100%;
+    height: 120px;
+    margin-top: 1px;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+
+.InputContainer {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 120px);
+    height: 48px;
+    align-items: center;
+    border: 0.8px solid #CED2DB;
+}
+
+.InputContainer:focus-within {
+    border-color: #4070F4;
+}
+
+.InputContainer input {
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    height: 400;
+    margin-left: 12px;
+    color: #0A2156;
+    outline: none; 
+}
+
+.MapIconContainer {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    margin-left: 12px;
+}
+
+.MapIconContainer img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: fill;
+}
+
+.SearchIconContainer {
+    display: flex;
+    width: 48.8px;
+    height: 48px;
+    border-left: 0.8px solid #CED2DB;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.InputContainer:focus-within .SearchIconContainer {
+    border-color: #4070F4;
+}
+
+.SearchIconContainer img {
+    width: 24px; 
+    height: 24px; 
+    object-fit: fill;
+}
