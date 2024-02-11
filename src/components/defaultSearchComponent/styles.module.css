@@ -3,7 +3,6 @@
     display: flex;
     width: 100%;
     height: 120px;
-    margin-top: 1px;
     align-items: center;
     justify-content: center;
     background-color: #FFFFFF;
@@ -32,6 +31,7 @@
     color: #0A2156;
     outline: none; 
 }
+
 
 .MapIconContainer {
     display: flex;
