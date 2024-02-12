@@ -17,12 +17,10 @@ export const DefaultSearchComponent: React.FC<IDefaultSearchComponentProps> = ({
         }
     };
 
-
     const handleSearchClick = () => {
         onSearchClicked(searchText);
     };
-
-
+    
     return(
         <div className={styles.MainContainer}>
             <div className={styles.InputContainer}>

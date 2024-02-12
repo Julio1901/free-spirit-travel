@@ -1,0 +1,198 @@
+
+.MainContainer {
+    display: flex;
+    width: 100%;
+    height: 233px;
+    flex-direction: row;
+    align-items: center;
+    background-color: aqua;
+    margin-bottom: 14px;
+}
+
+.ImageContentContainer {
+    display: flex;
+    width: 213px;
+    height: 233px;
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center;
+}
+
+.ImageContentHeaderContainer {
+    display: flex;
+    width: 100%;
+    height: 24px;
+    margin-left: 14.62px;
+    margin-right: 14.62px;
+    margin-top: 14px;
+    align-items: center;
+}
+
+.ImageContentHeaderContainer button{ 
+    width: 70px;
+    height: 24px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    font-family: 'CircularSDT';
+    font-size: 12px; 
+    font-weight: 450;
+}
+
+.ImageContentHeaderContainer img{
+    width: 18px;
+    height: 16px;
+    margin-left: auto;
+    margin-right: 3px;
+ }
+
+ .DestinationInfoContainer{
+    display: flex;
+    width: 668px;
+    height: 166px;
+    flex-direction: row;
+    background-color: beige;
+ }
+
+.DestinationInfoContainerContent {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    margin-left: 24px;
+    background-color: brown;
+    
+}
+
+.DestinationTitle {
+    font-family: 'CircularSDT';
+    font-size: 22px; 
+    font-weight: 500;
+}
+
+.DestinationSubTitleContainer {
+    display: flex;
+    width: 100%;
+    height: 24px;
+}
+
+.DestinationSubTitleContainer img {
+    width: 24px;
+    height: 24px;
+}
+
+.DestinationSubTitleContainer p {
+    margin-left: 4px;
+    font-family: 'CircularSDT';
+    font-size: 14px; 
+    font-weight: 450;
+}
+
+.ReviewsConteiner {
+    display: flex;
+    width: 100%;
+    height: 38px;
+    flex-direction: row;
+    align-items: center;
+    background-color: aquamarine;
+    margin-top: auto;
+    margin-bottom: 22px;
+}
+
+.ReviewNoteContainer {
+    display: flex;
+    width: 40px;
+    height: 38px;
+    border-radius: 2px;
+    align-items: center;
+    justify-content: center;
+    background-color: #4070F4;
+}
+
+.ReviewNoteContainer p {
+    font-family: 'CircularSDT';
+    font-size: 14px; 
+    font-weight: 450;
+    color: #E7E9ED;
+}
+
+.ReviewDescription {
+    font-family: 'CircularSDT';
+    font-size: 14px; 
+    font-weight: 450;
+    margin-left: 6px;
+}
+
+.ReviewsCounter {
+    font-family: 'CircularSDT';
+    font-size: 14px; 
+    font-weight: 450;
+    margin-left: 11px;
+    color: #9EA5B8;
+}
+
+.Divider {
+    width: 1px;
+    height: 166px;
+    margin-right: 24px;
+    background-color: #E7E9ED;
+}
+
+.PriceInfoContainer {
+    display: flex;
+    width: 154px;
+    height: 113px;
+    align-self: center;
+    flex-direction: column;
+    background-color: darkorange;
+}
+
+.PriceInfoContainerButton {
+    display: flex;
+    width: 154px;
+    height: 39px;
+    border-radius: 3px;
+    margin-top: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #4070F4;
+}   
+
+.PriceInfoContainerButton p {
+    font-family: 'CircularSDT';
+    font-size: 16px; 
+    color:  #FFFFFF;
+}
+
+.PriceInfoContainerButton img {
+    width: 9.29px;
+    height: 11px;
+    margin-left: 17.71px;
+    margin-top: 1.5px;
+}
+
+.PriceWithoutDiscout {
+    font-family: 'CircularSDT';
+    font-size: 12px; 
+    font-weight: 450;
+    color: #858FA6;
+}
+
+.PriceWithDiscountContainer {
+    display: flex;
+    width: 106px;
+    height: 30px;
+}
+
+.MonetarySymbol {
+    font-family: 'CircularSDT';
+    font-size: 12px; 
+    font-weight: 450;
+    color: #0A2156;
+}
+
+.PriceWithDiscount {
+    font-family: 'CircularSDT';
+    font-size: 24px; 
+    font-weight: 700;
+    color: #4070F4;
+}
