@@ -26,8 +26,6 @@ export default function Home() {
     };
 
     fetchData();
-    console.log("test")
-    console.log(destinationData)
   }, []);
 
 
@@ -56,7 +54,6 @@ export default function Home() {
         <ul>
         {destinationData?.map((destination, index) => (
           <li key={index}>
-            {/* Passando as props para o componente CardListDestination */}
             <CardListDestination
               name={destination.name}
               image={destination.image}

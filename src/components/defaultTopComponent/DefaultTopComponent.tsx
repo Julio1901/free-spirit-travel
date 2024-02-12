@@ -1,6 +1,28 @@
+import { useEffect, useState } from "react";
 import styles from "./styles.module.css"
+import axios from "axios";
+import { DOLLAR_EXCHANGE_RATE } from "@/common/network/endpoints";
+import { checkIfPriceValueExists, handleWithDollarRattingConverter } from "@/common/utils/priceUtils";
 
 export const DefaultTopComponent = () => {
+
+    const [dollarExchangeRate, setdollarExchangeRate] = useState<IDollarExchangeRate | null>(null);
+
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get<IDollarExchangeRate>(DOLLAR_EXCHANGE_RATE);
+          setdollarExchangeRate(response.data);
+        } catch (error) {
+          console.error('Erro ao buscar dados:', error);
+        }
+      };
+  
+      fetchData();
+      console.log('test')
+      console.log(dollarExchangeRate)
+    }, []);
+
     return(
         <div className={styles.MainContainer}>
             <div className={styles.ContentContainer}>
@@ -8,7 +30,7 @@ export const DefaultTopComponent = () => {
                     <img src="/assets/images/logo.png"/>
                 </div>
                 <div className={styles.RightContentContainer}>
-                    <p className={styles.DollarDescriptionText}>Cotação dólar hoje: R$5,53</p>
+                    <p className={styles.DollarDescriptionText}>Cotação dólar hoje: R${handleWithDollarRattingConverter(dollarExchangeRate?.USDBRL.high)}</p>
                     <div className={styles.FlagContainer}>
                         <img src="/assets/images/brazil-flag.png"/>
                     </div>

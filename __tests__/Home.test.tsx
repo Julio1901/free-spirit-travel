@@ -9,5 +9,5 @@ it("Should render correctly", () => {
 
 it("Should render dollar exchange rate description correctly", () => {
     render(<Home/>)
-    expect(screen.getByText("Cotação dólar hoje: R$5,53")).toBeInTheDocument()
+    expect(screen.getByText("Cotação dólar hoje: R$Valor indispoível")).toBeInTheDocument()
 })
