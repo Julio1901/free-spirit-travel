@@ -54,6 +54,7 @@
     margin-left: auto;
     align-items: center;
     justify-content: center;
+    cursor: pointer; 
 }
 
 .InputContainer:focus-within .SearchIconContainer {

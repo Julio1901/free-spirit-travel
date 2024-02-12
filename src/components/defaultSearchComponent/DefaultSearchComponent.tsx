@@ -8,8 +8,8 @@ export const DefaultSearchComponent = () => {
                     <img src="/assets/images/map-icon.png"/>
                 </div>
                 <input type="text" placeholder="Busque por atração" />
-                <div className={styles.SearchIconContainer}>
-                    <img src="/assets/images/search-icon.png"/>
+                <div className={styles.SearchIconContainer} data-testid="id-search-icon-container">
+                    <img src="/assets/images/search-icon.png" alt="Search Icon"/>
                 </div>
             </div>
         </div>
