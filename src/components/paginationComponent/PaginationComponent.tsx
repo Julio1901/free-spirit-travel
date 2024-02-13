@@ -10,6 +10,12 @@ export const PaginationComponent = () => {
         setDropDownIsOpenState(!dropDownIsOpenState)
     }
 
+    const handleVerticalSelectorClick = (event: React.MouseEvent<HTMLParagraphElement>) => {
+        const value = event.currentTarget.innerText;
+        setSelectedPage(value)
+    }
+
+
     const selectOption = (option: string) => {
         setSelectedPage(option);
         setDropDownIsOpenState(false);
@@ -38,8 +44,16 @@ export const PaginationComponent = () => {
                             </ul>
                     </div>
                 )
-            
             }
+
+            <div className={styles.VerticalSelectorContainer}>
+                <img src='/assets/icons/icon-arrow-left.png'/>
+                <p onClick={handleVerticalSelectorClick}>1</p>
+                <p onClick={handleVerticalSelectorClick}>2</p>
+                <p onClick={handleVerticalSelectorClick}>3</p>
+                <p style={{cursor: "default"}}>...</p>
+                <img src='/assets/icons/icon-arrow-right-filled.png'/>
+            </div>
           
         </div>
     )
