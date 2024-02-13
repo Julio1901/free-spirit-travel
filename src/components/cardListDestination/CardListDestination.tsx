@@ -1,5 +1,7 @@
 import { checkIfPriceValueExists } from "@/common/utils/priceUtils";
 import styles from "./styles.module.css"
+import { isImagePattern } from '../../common/utils/imageUtils';
+
 
 interface ICardListDestinationProps {
     name: string;
@@ -12,14 +14,22 @@ interface ICardListDestinationProps {
 
 
 export const CardListDestination : React.FC<ICardListDestinationProps> = ({name, location, image, description, price, rating}) => {
+    
+    const imageUrl = isImagePattern(image) ? image : '/assets/images/image-not-found.png';
+
     return (
         <div className={styles.MainContainer}>
-                <div className={styles.ImageContentContainer} style={{ backgroundImage: `url('${image}')` }}>
-                    <div className={styles.ImageContentHeaderContainer} >
-                        <button>Ingresso</button>
-                        <img src="/assets/icons/icon-heart-not-filled.png"/>
-                    </div>
-                </div>
+
+
+<div className={styles.ImageContentContainer}>
+    <div className={styles.ImageContentContainer} style={{ backgroundImage: `url(${imageUrl})` }}>
+        <div className={styles.ImageContentHeaderContainer}>
+        <button>Ingresso</button>
+        <img src="/assets/icons/icon-heart-not-filled.png" alt="Ícone de coração" />
+        </div>
+    </div>
+    </div>
+              
             <div className={styles.DestinationInfoContainer}>
                 <div className={styles.DestinationInfoContainerContent}>
                     <p className={styles.DestinationTitle}>{name}</p>
