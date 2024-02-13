@@ -4,26 +4,24 @@ import { DefaultTopComponent } from "@/components/defaultTopComponent/DefaultTop
 import "./styles/home.css"
 import { DefaultSearchComponent } from "@/components/defaultSearchComponent/DefaultSearchComponent";
 import { CardListDestination } from "@/components/cardListDestination/CardListDestination";
-
 import axios from 'axios';
 import { useEffect, useState } from "react";
 import { TICKETS_ENDPOIN } from "@/common/network/endpoints";
 import { PaginationComponent } from "@/components/paginationComponent/PaginationComponent";
-
+import { TICKETS_LIST_LIMIT } from "@/common/network/paginationLimitValues";
 
 export default function Home() {
 
   const [destinationData, setDestinationData] = useState<ITicket[] | null>(null);
   const [page, setPage] = useState(1)
 
-
-  const params = {
-    page: page,
-    limit: 6
-  };
-
-
   useEffect(() => {
+    
+    const params = {
+      page: page,
+      limit: TICKETS_LIST_LIMIT
+    };
+
     const fetchData = async () => {
       try {
         const response = await axios.get<ITicket[]>(TICKETS_ENDPOIN, { params });
@@ -37,14 +35,48 @@ export default function Home() {
   }, [page]);
 
   const handleSearchClicked = (value : string) => {
+
     if(value === ''){
       handleFilterCleaning()
+      return
     }
-    console.log(value)
+
+    const fetchData = async () => {
+
+      const params = {
+        search: value,
+        limit: TICKETS_LIST_LIMIT
+      };
+
+      try {
+        const response = await axios.get<ITicket[]>(TICKETS_ENDPOIN, { params });
+        setDestinationData(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar dados:', error);
+      }
+    };
+
+    fetchData();
   }
 
   const handleFilterCleaning = () => {
-    //TODO 
+    //TODO change this code to avoid duplicate code
+    const params = {
+      page: page,
+      limit: TICKETS_LIST_LIMIT
+    };
+
+    const fetchData = async () => {
+      try {
+        const response = await axios.get<ITicket[]>(TICKETS_ENDPOIN, { params });
+        setDestinationData(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar dados:', error);
+      }
+    };
+
+    fetchData();
+
   }
   
   const handleWithPaginationClick = (page : string) => {

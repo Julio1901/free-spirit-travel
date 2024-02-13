@@ -1,0 +1,1 @@
+export const TICKETS_LIST_LIMIT = 6
