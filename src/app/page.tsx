@@ -15,39 +15,24 @@ export default function Home() {
   const [destinationData, setDestinationData] = useState<ITicket[] | null>(null);
   const [page, setPage] = useState(1)
 
-  useEffect(() => {
+  const makeTicketRequest = (ticketName : string | null = null) => {
+    let params = {};
     
-    const params = {
-      page: page,
-      limit: TICKETS_LIST_LIMIT
-    };
-
-    const fetchData = async () => {
-      try {
-        const response = await axios.get<ITicket[]>(TICKETS_ENDPOIN, { params });
-        setDestinationData(response.data);
-      } catch (error) {
-        console.error('Erro ao buscar dados:', error);
-      }
-    };
-
-    fetchData();
-  }, [page]);
-
-  const handleSearchClicked = (value : string) => {
-
-    if(value === ''){
-      handleFilterCleaning()
-      return
-    }
-
-    const fetchData = async () => {
-
-      const params = {
-        search: value,
+    if (ticketName === null){
+       params = {
+        page: page,
         limit: TICKETS_LIST_LIMIT
       };
-
+      console.log('test')
+    }
+    else{
+       params = {
+        search: ticketName,
+        limit: TICKETS_LIST_LIMIT
+      };
+    }
+    
+    const fetchData = async () => {
       try {
         const response = await axios.get<ITicket[]>(TICKETS_ENDPOIN, { params });
         setDestinationData(response.data);
@@ -59,24 +44,20 @@ export default function Home() {
     fetchData();
   }
 
+  useEffect(() => {
+    makeTicketRequest()
+  }, [page]);
+
+  const handleSearchClicked = (value : string) => {
+    if(value === ''){
+      handleFilterCleaning()
+      return
+    }
+      makeTicketRequest(value)
+  }
+
   const handleFilterCleaning = () => {
-    //TODO change this code to avoid duplicate code
-    const params = {
-      page: page,
-      limit: TICKETS_LIST_LIMIT
-    };
-
-    const fetchData = async () => {
-      try {
-        const response = await axios.get<ITicket[]>(TICKETS_ENDPOIN, { params });
-        setDestinationData(response.data);
-      } catch (error) {
-        console.error('Erro ao buscar dados:', error);
-      }
-    };
-
-    fetchData();
-
+    makeTicketRequest()
   }
   
   const handleWithPaginationClick = (page : string) => {
