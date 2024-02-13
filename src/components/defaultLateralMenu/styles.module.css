@@ -78,6 +78,7 @@
     font-family: 'CircularSDT';
     font-size: 14px; 
     font-weight: 450;
+    cursor: pointer;
     background-color: #4070F4;
 }
 
@@ -93,5 +94,119 @@
     font-family: 'CircularSDT';
     font-size: 14px; 
     font-weight: 450;
+    cursor: pointer;
 }
 
+.StarFilterContainer {
+    width: 319px;
+    height: 115px;
+    margin-top: 24px;
+    background-color: burlywood;
+}
+
+.StarFilterHeaderContainer {
+    width: 100%;
+    height: 22px;
+    background-color: aqua;
+}
+
+.StarFilterTitle{
+    font-family: 'CircularSDT';
+    font-size: 16px; 
+    font-weight: 700;
+    color: #0A2156;
+}
+
+.StarButtonGroupContainer {
+    display: flex;
+    width: 319px;
+    height: 79px;
+    margin-top: 14px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: #4070F4;
+}
+
+.StarButtonSubGroupContainer {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.StarButton {
+    display: flex;
+    width: fit-content;
+    height: 32px;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #E7E9ED;
+}
+
+.StarButton p {
+    font-family: 'CircularSDT';
+    font-size: 14px; 
+    font-weight: 450;
+    margin-left: 10px;
+    margin-right: 4px;
+    color: #B6BCC9;
+}
+
+.StarButton img {
+    width: 24px;
+    height: 24px;
+}
+
+.CommodityContainer {
+    width: 319px;
+    height: 184px;
+    margin-top: 24px;
+    background-color: aqua;
+}
+
+.CommodityHeaderContainer {
+    width: 100%;
+    height: 22px;
+    background-color: #4070F4;
+}
+
+.CommodityHeaderContainer p {
+    font-family: 'CircularSDT';
+    font-size: 16px; 
+    font-weight: 700;
+    color: #0A2156;
+}
+
+.CommodityCheckBoxGroupContainer {
+    display: flex;
+    width: 143px;
+    height: 148px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 14px;
+    gap: 12px;
+    background-color: orange;
+}
+
+.CheckBoxContainer {
+    display: flex;
+    width: fit-content;
+    height: 20px;
+    background-color: green;
+}
+
+.CheckBoxContainer input {
+    width: 20px;
+    height: 20px;
+    border: 1.8px solid #9EA5B8;
+    border-radius: 3px;
+}
+
+.CheckBoxContainer p {
+    font-family: 'CircularSDT';
+    font-size: 14px; 
+    font-weight: 450;
+    margin-left: 10px;
+}

@@ -18,8 +18,75 @@ export const DefaultLateralMenu : React.FC = () => {
                </div>
             </div>
             <div className={styles.Divider} style={{marginTop: 24}}></div>
-        
-           
+            <div className={styles.StarFilterContainer}>
+                <div className={styles.StarFilterHeaderContainer}>
+                    <p className={styles.StarFilterTitle}>Tipo de propriedade</p>
+                </div>
+                <div className={styles.StarButtonGroupContainer}>
+                    <div className={styles.StarButtonSubGroupContainer}>
+                        <div className={styles.StarButton}>
+                            <img src="/assets/icons/icon-star-filled.png"/> 
+                            <img src="/assets/icons/icon-star-filled.png"/> 
+                            <img src="/assets/icons/icon-star-filled.png"/> 
+                            <img src="/assets/icons/icon-star-filled.png"/> 
+                            <img src="/assets/icons/icon-star-filled.png"/> 
+                            <p>(134)</p>
+                        </div>
+                        <div className={styles.StarButton}>
+                            <img src="/assets/icons/icon-star-filled.png"/> 
+                            <img src="/assets/icons/icon-star-filled.png"/> 
+                            <img src="/assets/icons/icon-star-filled.png"/> 
+                            <img src="/assets/icons/icon-star-filled.png"/> 
+                            <p>(134)</p>
+                        </div>
+                    </div>
+                    <div className={styles.StarButtonSubGroupContainer}>
+                        <div className={styles.StarButton}>
+                            <img src="/assets/icons/icon-star-filled.png"/> 
+                            <img src="/assets/icons/icon-star-filled.png"/> 
+                            <img src="/assets/icons/icon-star-filled.png"/> 
+                            <p>(134)</p>
+                        </div>
+                        <div className={styles.StarButton}>
+                            <img src="/assets/icons/icon-star-filled.png"/> 
+                            <img src="/assets/icons/icon-star-filled.png"/> 
+                            <p>(134)</p>
+                        </div>
+                        <div className={styles.StarButton}>
+                            <img src="/assets/icons/icon-star-filled.png"/> 
+                            <p>(134)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className={styles.Divider} style={{marginTop: 24}}></div>
+            <div className={styles.CommodityContainer}>
+                <div className={styles.CommodityHeaderContainer}>
+                    <p>Comodidades</p>
+                </div>
+                <div className={styles.CommodityCheckBoxGroupContainer}>
+                    <div className={styles.CheckBoxContainer}>
+                        <input type="checkbox"/>
+                        <p>Wi-Fi</p>
+                    </div>
+                    <div className={styles.CheckBoxContainer}>
+                        <input type="checkbox"/>
+                        <p>Cozinha</p>
+                    </div>
+                    <div className={styles.CheckBoxContainer}>
+                        <input type="checkbox"/>
+                        <p>Máquina de Lavar</p>
+                    </div>
+                    <div className={styles.CheckBoxContainer}>
+                        <input type="checkbox"/>
+                        <p>Máquina de Lavar</p>
+                    </div>
+                    <div className={styles.CheckBoxContainer}>
+                        <input type="checkbox"/>
+                        <p>Secadora</p>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
