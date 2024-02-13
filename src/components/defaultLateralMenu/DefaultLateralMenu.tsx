@@ -87,6 +87,70 @@ export const DefaultLateralMenu : React.FC = () => {
                     </div>
                 </div>
             </div>
+            <div className={styles.Divider} style={{marginTop: 24}}></div>
+            <div className={styles.AccommodationContainer}>
+                <div className={styles.AccommodationHeaderContainer}>
+                    <p>Tipo de propriedade</p>
+                </div>
+                <div className={styles.AccommodationCardsContainer}>
+                    <div className={styles.AccomodationCardButton}>
+                        <img src="/assets/icons/icon-house-not-filled.png"/>
+                        <p>Casa (346)</p>
+                    </div>
+                    <div className={styles.AccomodationCardButton} style={{borderColor:"#CED2DB"}}>
+                        <img src="/assets/icons/icon-apartament-not-filled.png"/>
+                        <p style={{color:"#CED2DB"}}>Apartamento (234)</p>
+                    </div>
+                    <div className={styles.AccomodationCardButton} style={{borderColor:"#CED2DB"}}>
+                        <img src="/assets/icons/icon-hotel-not-filled.png"/>
+                        <p style={{color:"#CED2DB"}}>Hotel (23)</p>
+                    </div>
+                </div>
+            </div>
+            <div className={styles.Divider} style={{marginTop: 24}}></div>
+            <div className={styles.ReviewContainer}>
+                <div className={styles.ReviewHeaderContainer}>
+                    <p>Review Score</p>
+                </div>
+                <div className={styles.ReviewScoreGroup}>
+                    <div className={styles.ReviewCardContainer}>
+                        <div className={styles.ReviewCardBottomLayer}>
+                            <div className={styles.ReviewCardTopLayer} style={{width: 167}}></div>
+                        </div>
+                        <p>Excelente (543)</p>
+                    </div>
+                    <div className={styles.ReviewCardContainer}>
+                        <div className={styles.ReviewCardBottomLayer}>
+                            <div className={styles.ReviewCardTopLayer} style={{width: 149}}></div>
+                        </div>
+                        <p>Muito bom (543)</p>
+                    </div>
+                    <div className={styles.ReviewCardContainer}>
+                        <div className={styles.ReviewCardBottomLayer}>
+                            <div className={styles.ReviewCardTopLayer} style={{width: 117}}>
+
+                            </div>
+                        </div>
+                        <p>Bom  (543)</p>
+                    </div>
+                    <div className={styles.ReviewCardContainer}>
+                        <div className={styles.ReviewCardBottomLayer}>
+                            <div className={styles.ReviewCardTopLayer} style={{width: 97}}>
+
+                            </div>
+                        </div>
+                        <p>Ruim (543)</p>
+                    </div>
+                    <div className={styles.ReviewCardContainer}>
+                        <div className={styles.ReviewCardBottomLayer}>
+                            <div className={styles.ReviewCardTopLayer}>
+
+                            </div>
+                        </div>
+                        <p>Pessímo (14))</p>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
