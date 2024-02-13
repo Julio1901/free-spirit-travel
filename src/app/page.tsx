@@ -8,6 +8,7 @@ import { CardListDestination } from "@/components/cardListDestination/CardListDe
 import axios from 'axios';
 import { useEffect, useState } from "react";
 import { TICKETS_ENDPOIN } from "@/common/network/endpoints";
+import { PaginationComponent } from "@/components/paginationComponent/PaginationComponent";
 
 
 export default function Home() {
@@ -50,6 +51,9 @@ export default function Home() {
       <DefaultTopComponent/>
       <DefaultSearchComponent hint="Busque por atração" onSearchClicked={ e => handleSearchClicked(e)}/>
       <div className="BodyContainer">
+        <div className="FilterContainer">
+
+        </div>
         <div className="DestinationListConainer">
         <ul>
         {destinationData?.map((destination, index) => (
@@ -64,8 +68,14 @@ export default function Home() {
             />
           </li>
         ))}
-      </ul>
+        </ul>
         </div>
+      </div>
+      <div className="FootContainer">
+        <div className="PaginationComponentContainer">
+          <PaginationComponent/>
+        </div>
+          
       </div>
    </div>
   );

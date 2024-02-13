@@ -1,0 +1,75 @@
+
+.MainContainer {
+    display: flex;
+    width: 491px;
+    height: 28px;
+   align-items: center;
+    background-color: brown;
+}
+
+.ResultCounterText {
+    font-size: 12px; 
+    font-weight: 400;
+    color: #828292;
+}
+
+.PageText {
+    font-size: 12px; 
+    font-weight: 500;
+    margin-left: 24px;
+    color: #3E3F44;
+}
+
+.DropDownContainerClosedState {
+    display: flex;
+    width: 69px;
+    height: 28px;
+    border-radius: 5px;
+    border: 1px solid #8A90BD;
+    margin-left: 8px;
+    align-items: center;
+    background-color: #FFFFFF;
+    cursor: pointer; 
+}
+
+.DropDownContainerClosedState p {
+    font-size: 12px; 
+    font-weight: 400;
+    color: #828292;
+    flex-direction: row;
+    margin-left: 12px;
+}
+
+.DropDownContainerClosedState img {
+    margin-left: auto;
+    margin-right: 4px;
+}
+
+.DropDownContainerOpenState {
+    width: 69px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid #8A90BD;
+    margin-left: 8px;
+    align-items: center;
+    cursor: pointer; 
+    overflow: auto;
+    background-color: #FFFFFF;
+}
+
+.DropDownContainerOpenState ul {
+    max-height: 128px;
+}
+
+.DropDownContainerOpenState p {
+    font-size: 12px; 
+    font-weight: 400;
+    color: #828292;
+    flex-direction: row;
+    margin-left: 12px;
+}
+
+.DropDownContainerOpenState img {
+    margin-left: auto;
+    margin-right: 4px;
+}
