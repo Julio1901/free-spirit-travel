@@ -10,11 +10,15 @@ import { TICKETS_ENDPOIN } from "@/common/network/endpoints";
 import { PaginationComponent } from "@/components/paginationComponent/PaginationComponent";
 import { TICKETS_LIST_LIMIT } from "@/common/network/paginationLimitValues";
 import { DefaultLateralMenu } from "@/components/defaultLateralMenu/DefaultLateralMenu";
+import { useRouter } from 'next/navigation';
+import Link from "next/link";
 
 export default function Home() {
 
   const [destinationData, setDestinationData] = useState<ITicket[] | null>(null);
   const [page, setPage] = useState(1)
+
+  const router = useRouter();
 
   const makeTicketRequest = (ticketName : string | null = null) => {
     let params = {};
@@ -65,6 +69,11 @@ export default function Home() {
     setPage(Number(page))
   }
 
+  const handleWithTicketClick = () => {
+    console.log("Clicked")
+    router.push('/ticket-detail');
+  }
+
   return (
    <div className="MainContainer">
       <DefaultTopComponent/>
@@ -77,6 +86,10 @@ export default function Home() {
         <ul>
         {destinationData?.map((destination, index) => (
           <li key={index}>
+            <Link
+              href='selected-ticket'
+             >
+
             <CardListDestination
               name={destination.name}
               image={destination.image}
@@ -85,6 +98,8 @@ export default function Home() {
               price={destination.price}
               rating={destination.rating}
             />
+            </Link>
+           
           </li>
         ))}
         </ul>
