@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { TICKETS_ENDPOIN } from "@/common/network/endpoints";
 import { PaginationComponent } from "@/components/paginationComponent/PaginationComponent";
 import { TICKETS_LIST_LIMIT } from "@/common/network/paginationLimitValues";
+import { DefaultLateralMenu } from "@/components/defaultLateralMenu/DefaultLateralMenu";
 
 export default function Home() {
 
@@ -69,8 +70,8 @@ export default function Home() {
       <DefaultTopComponent/>
       <DefaultSearchComponent hint="Busque por atração" onSearchClicked={ e => handleSearchClicked(e)}/>
       <div className="BodyContainer">
-        <div className="FilterContainer">
-
+        <div className="LateralMenuContainer">
+          <DefaultLateralMenu/>
         </div>
         <div className="DestinationListConainer">
         <ul>

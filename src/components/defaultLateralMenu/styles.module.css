@@ -1,0 +1,41 @@
+
+.MainContainer {
+    display: flex;
+    width: 367px;
+    height: 1103px;
+    flex-direction: column;
+    align-items: center;
+    background-color: darkseagreen;
+}
+
+.HeaderContainer {
+    display: flex;
+    width: 319px;
+    height: 42px;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 24px;
+    background-color: beige;
+}
+
+.Title {
+    font-family: 'CircularSDT';
+    font-size: 24px; 
+    font-weight: 700;
+    color: #0A2156;
+}
+
+.ButtonText {
+    font-family: 'CircularSDT';
+    font-size: 14px; 
+    font-weight: 450;
+    margin-left: auto;
+    color: #3570BF;
+}
+
+
+.Divider {
+    width: 319px;
+    height: 1px;
+    background-color:#E7E9ED
+}
