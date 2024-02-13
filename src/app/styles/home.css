@@ -29,6 +29,7 @@
   overflow: hidden;
   margin-left: auto;
   margin-right: 60px;
+  overflow: auto;
 }
 
 .FootContainer {

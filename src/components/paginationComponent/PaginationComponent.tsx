@@ -1,10 +1,14 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import styles from "./styles.module.css"
 
-export const PaginationComponent = () => {
+interface IPaginationComponentProps {
+    onClick : (pageNumber : string) => void
+}
+
+export const PaginationComponent : React.FC<IPaginationComponentProps>= ({onClick}) => {
 
     const [dropDownIsOpenState, setDropDownIsOpenState] = useState(false)
-    const [selectedPage, setSelectedPage] = useState<string >("1");
+    const [selectedPage, setSelectedPage] = useState<string >("01");
 
     const handleWithDropdownClick = () => {
         setDropDownIsOpenState(!dropDownIsOpenState)
@@ -12,17 +16,39 @@ export const PaginationComponent = () => {
 
     const handleVerticalSelectorClick = (event: React.MouseEvent<HTMLParagraphElement>) => {
         const value = event.currentTarget.innerText;
-        setSelectedPage(value)
+        const contatenedValue = `0${value}`
+        setSelectedPage(contatenedValue)
+        onClick(contatenedValue)
     }
-
 
     const selectOption = (option: string) => {
         setSelectedPage(option);
         setDropDownIsOpenState(false);
+        onClick(option)
       };
 
+    const increasePaginationNumber = () => {
+        if(parseInt(selectedPage) >= 3) {
+            return
+        }
 
-      const options = ["0" , "1" , "2", "3", "4", "5", "6", "7" , "8" , "9", "10"]
+        const page = (parseInt(selectedPage) + 1).toString()
+        const contatenedValue = `0${page}`
+        setSelectedPage(contatenedValue);
+        onClick(contatenedValue)
+    }
+
+    const decreasePaginationNumber = () => {
+        if(parseInt(selectedPage) <= 1) {
+            return
+        }
+        const page = (parseInt(selectedPage) - 1).toString()
+        const contatenedValue = `0${page}`
+        setSelectedPage(contatenedValue);
+        onClick(contatenedValue)
+    }
+
+    const pageNumbers = ["01" , "02", "03"]
 
     return(
         <div className={styles.MainContainer}>
@@ -36,9 +62,9 @@ export const PaginationComponent = () => {
                 ) : (
                     <div className={styles.DropDownContainerOpenState} onClick={handleWithDropdownClick}>
                           <ul className="dropdown-menu">
-                            {options.map(option => (
-                                    <li key={option} onClick={() => selectOption(option)}>
-                                    {option}
+                            {pageNumbers.map(pageNumber => (
+                                    <li key={pageNumber} onClick={() => selectOption(pageNumber)}>
+                                    {pageNumber}
                                     </li>
                                 ))}
                             </ul>
@@ -47,14 +73,13 @@ export const PaginationComponent = () => {
             }
 
             <div className={styles.VerticalSelectorContainer}>
-                <img src='/assets/icons/icon-arrow-left.png'/>
+                <img src='/assets/icons/icon-arrow-left.png' onClick={decreasePaginationNumber} style={{ cursor: 'pointer' }}/>
                 <p onClick={handleVerticalSelectorClick}>1</p>
                 <p onClick={handleVerticalSelectorClick}>2</p>
                 <p onClick={handleVerticalSelectorClick}>3</p>
                 <p style={{cursor: "default"}}>...</p>
-                <img src='/assets/icons/icon-arrow-right-filled.png'/>
+                <img src='/assets/icons/icon-arrow-right-filled.png' onClick={increasePaginationNumber} style={{ cursor: 'pointer' }}/>
             </div>
-          
         </div>
     )
 }

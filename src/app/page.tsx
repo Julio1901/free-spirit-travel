@@ -14,12 +14,19 @@ import { PaginationComponent } from "@/components/paginationComponent/Pagination
 export default function Home() {
 
   const [destinationData, setDestinationData] = useState<ITicket[] | null>(null);
+  const [page, setPage] = useState(1)
+
+
+  const params = {
+    page: page,
+    limit: 6
+  };
 
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get<ITicket[]>(TICKETS_ENDPOIN);
+        const response = await axios.get<ITicket[]>(TICKETS_ENDPOIN, { params });
         setDestinationData(response.data);
       } catch (error) {
         console.error('Erro ao buscar dados:', error);
@@ -27,13 +34,7 @@ export default function Home() {
     };
 
     fetchData();
-  }, []);
-
-
-
-
-
-
+  }, [page]);
 
   const handleSearchClicked = (value : string) => {
     if(value === ''){
@@ -46,6 +47,10 @@ export default function Home() {
     //TODO 
   }
   
+  const handleWithPaginationClick = (page : string) => {
+    setPage(Number(page))
+  }
+
   return (
    <div className="MainContainer">
       <DefaultTopComponent/>
@@ -73,7 +78,7 @@ export default function Home() {
       </div>
       <div className="FootContainer">
         <div className="PaginationComponentContainer">
-          <PaginationComponent/>
+          <PaginationComponent onClick={(e) => handleWithPaginationClick(e)}/>
         </div>
           
       </div>
