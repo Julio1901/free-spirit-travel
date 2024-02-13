@@ -9,7 +9,8 @@
   width: 100%;
   height: 1468px;
   flex-direction: row;
-  background-color: blueviolet;
+  background-color: #F6F6F6;
+  margin-top: 36px;
 }
 
 .LateralMenuContainer {
@@ -23,18 +24,15 @@
   width: 929px;
   height: 1468px;
   flex-direction: column;
-  background-color: black;
-  overflow: hidden;
   margin-left: auto;
   margin-right: 60px;
-  overflow: auto;
 }
 
 .FootContainer {
   display: flex;
-  background-color: yellow;
   width: 100%;
   height: 104px;
+  background-color: #F6F6F6;
 }
 
 .PaginationComponentContainer {

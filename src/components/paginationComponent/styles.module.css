@@ -3,8 +3,7 @@
     display: flex;
     width: 491px;
     height: 28px;
-   align-items: center;
-    background-color: brown;
+    align-items: center;
 }
 
 .ResultCounterText {
@@ -81,7 +80,6 @@
     flex-direction: row;
     margin-left: 24px;
     justify-content: space-between; 
-    background-color: aqua;
 }
 
 .VerticalSelectorContainer p {

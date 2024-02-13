@@ -5,7 +5,7 @@
     height: 1103px;
     flex-direction: column;
     align-items: center;
-    background-color: darkseagreen;
+    background-color: #FFFFFF;
 }
 
 .HeaderContainer {
@@ -15,7 +15,6 @@
     flex-direction: row;
     align-items: center;
     margin-top: 24px;
-    background-color: beige;
 }
 
 .Title {
@@ -101,13 +100,11 @@
     width: 319px;
     height: 115px;
     margin-top: 24px;
-    background-color: burlywood;
 }
 
 .StarFilterHeaderContainer {
     width: 100%;
     height: 22px;
-    background-color: aqua;
 }
 
 .StarFilterTitle{
@@ -125,7 +122,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: 15px;
-    background-color: #4070F4;
 }
 
 .StarButtonSubGroupContainer {
@@ -163,13 +159,11 @@
     width: 319px;
     height: 184px;
     margin-top: 24px;
-    background-color: aqua;
 }
 
 .CommodityHeaderContainer {
     width: 100%;
     height: 22px;
-    background-color: #4070F4;
 }
 
 .CommodityHeaderContainer p {
@@ -187,14 +181,12 @@
     align-items: flex-start;
     margin-top: 14px;
     gap: 12px;
-    background-color: orange;
 }
 
 .CheckBoxContainer {
     display: flex;
     width: fit-content;
     height: 20px;
-    background-color: green;
 }
 
 .CheckBoxContainer input {
@@ -215,13 +207,12 @@
     width: 319px;
     height: 154px;
     margin-top: 24px;
-    background-color: blueviolet;
 }
 
 .AccommodationHeaderContainer {
     width: 100%;
     height: 22px;
-    background-color: #4070F4
+
 }
 
 .AccommodationHeaderContainer p {
@@ -238,7 +229,6 @@
     flex-direction: column;
     margin-top: 14px;
     gap: 8px;
-    background-color: beige;
 }
 
 .AccomodationCardButton {
@@ -268,13 +258,11 @@
     width: 319px;
     height: 234px;
     margin-top: 24px;
-    background-color: brown;
 }
 
 .ReviewHeaderContainer {
     width: 100%;
     height: 22px;
-    background-color: #3570BF;
 }
 
 .ReviewHeaderContainer p {
@@ -291,14 +279,12 @@
     margin-top: 14px;
     flex-direction: column;
     gap: 12px;
-    background-color: beige;
 }
 
 .ReviewCardContainer {
     display: flex;
     width: 100%;
     height: 30px;
-    background-color: yellow;
 }
 
 .ReviewCardContainer p {
