@@ -1,0 +1,217 @@
+
+.MainContainer {
+    width: 100%; 
+    min-width: 1440px;
+    height: 100vh; 
+}
+
+.BodyContainer {
+  display: flex;
+  width: 100%;
+  height: 1468px;
+  flex-direction: column;
+  background-color: #F6F6F6;
+}
+
+.TitleContainer {
+    display: flex;
+    width: 443px;
+    height: 62px;
+    flex-direction: row;
+    margin-left: 60px;
+    margin-top: 33px;
+}
+
+.TitleContainer img {
+    width: 24px;
+    height: 24px;
+}
+
+.TitleAndDescriptionContainer{
+    display: flex;
+    width: 404px;
+    height: 62px;
+    margin-left: 15px;
+    flex-direction: column;
+}
+
+.TitleContentContainer {
+    display: flex;
+    width: 404px;
+    height: 30px;
+    overflow: hidden; 
+}
+
+.TitleContentContainer p {
+    font-family: 'CircularSDT';
+    font-size: 24px;
+    height: 700;
+    align-self: center;
+}
+
+.LocationContainer {
+    display: flex;
+    width: 261px;
+    height: 24px;
+    margin-top: 8px;
+    flex-direction: row;
+}
+.LocationContainer img {
+    width: 24px;
+    height: 24px;
+}
+
+.LocationContainer p {
+    font-family: 'CircularSDT';
+    font-size: 14px;
+    height: 450; 
+    margin-left: 4px;
+    align-self: center;
+    color: #3C4C70;
+}
+
+.ImageContainer {
+    width: 1320px;
+    height: 434px;
+    margin-top: 34px;
+    margin-left: 60px;
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center;
+}
+
+.DisplayMorePictureButton {
+    display: flex;
+    width: 186px;
+    height: 50px;
+    border-radius: 4px;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: 8px;
+    justify-content: center;
+    background-color: #FFFFFF;
+
+}
+
+.DisplayMorePictureButton p {
+    font-family: 'CircularSDT';
+    font-size: 16px;
+    height: 500; 
+    align-self: center;
+    color: #4070F4;
+}
+
+.BottomContainer {
+    display: flex;
+    width: 1320px;
+    height: 752px;
+    flex-direction: row;
+    margin-left: 60px;
+    margin-top: 37px;
+}
+
+.InfosContainer {
+    width: 900px;
+    height: 752px;
+}
+
+.ReviewsConteiner {
+    display: flex;
+    width: 100%;
+    height: 38px;
+    flex-direction: row;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 22px;
+}
+
+.ReviewNoteContainer {
+    display: flex;
+    width: 40px;
+    height: 38px;
+    border-radius: 2px;
+    align-items: center;
+    justify-content: center;
+    background-color: #4070F4;
+}
+
+.ReviewNoteContainer p {
+    font-family: 'CircularSDT';
+    font-size: 14px; 
+    font-weight: 450;
+    color: #E7E9ED;
+}
+
+.ReviewDescription {
+    font-family: 'CircularSDT';
+    font-size: 14px; 
+    font-weight: 450;
+    margin-left: 6px;
+}
+
+.ReviewsCounter {
+    font-family: 'CircularSDT';
+    font-size: 14px; 
+    font-weight: 450;
+    margin-left: 11px;
+    color: #9EA5B8;
+}
+
+.InfosHeaderContainer {
+    width: 422px;
+    height: 80px;
+}
+
+.CommodityContainer{
+    display: flex;
+    width: 422px;
+    height: 18px;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.CommodityContainer p{
+    font-family: 'CircularSDT';
+    font-size: 14px; 
+    font-weight: 450;
+    align-self: center;
+    color: #9EA5B8;
+}
+
+.CommodityContainer img {
+    width: 18px;
+    height: 18px;
+}
+
+.ContentContainer {
+    width: 900px;
+    height: 638px;
+    margin-top: 34px;
+}
+
+.ContentContainerTitle {
+    font-family: 'CircularSDT';
+    font-size: 22px; 
+    font-weight: 450;
+    color: #0A2156;
+}
+
+.ContentContainerDescription {
+    font-family: 'CircularSDT';
+    font-size: 16px; 
+    font-weight: 500;
+    color: #9EA5B8;
+}
+
+.LocationMap {
+    width: 900px;
+    height: 340px;
+    margin-top: 8px;
+}
+
+.BuyTicketContainer {
+    width: 353px;
+    height: 473px;
+    margin-left: 38px;
+    background-color: yellow;
+}
