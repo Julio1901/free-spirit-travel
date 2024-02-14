@@ -210,8 +210,65 @@
 }
 
 .BuyTicketContainer {
+    display: flex;
     width: 353px;
     height: 473px;
     margin-left: 38px;
-    background-color: yellow;
+    border-radius: 8px;
+    justify-content: center;
+    background-color: #FFFFFF;
 }
+
+.BuyTicketCardInfo {
+    display: flex;
+    width: 305px;
+    height: 64px;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.BuyTicketCardInfo img {
+    width: 24px;
+    height: 24px;
+    margin-top: 8px;
+}
+
+.BuyTicketCardInfoContent {
+    display: flex;
+    width: 251px;
+    height: 48px;
+    margin-left: 14px;
+    align-self: center;
+}
+
+.BuyTicketTextContainer {
+    display: flex;
+    width: 125px;
+    height: 48px;
+    flex-direction: column;
+}
+
+.BuyIndividualTextContainer {
+    display: flex;
+    width: 125px;
+    height: 22px;
+    align-items: center;
+}
+
+.BuyTicketCardInfoContentTitle {
+    font-family: 'CircularSDT';
+    font-size: 16px; 
+    font-weight: 700;
+    color: #0A2156;
+}
+
+.BuyTicketCardInfoContentSubTitle{
+    font-family: 'CircularSDT';
+    font-size: 16px; 
+    font-weight: 450;
+    color: #9EA5B8;
+}
+
+
+
+

@@ -65,7 +65,20 @@ export default function SelectedTicket(){
                                 </div>
                             </div>
                             <div className={styles.BuyTicketContainer}>
-                                 
+                                <div className={styles.BuyTicketCardInfo} style={{marginTop:24}}>
+                                    <img src="/assets/icons/icon-callendar-not-filled.png"/> 
+                                    <div className={styles.BuyTicketCardInfoContent}>
+                                        <div className={styles.BuyTicketTextContainer}>
+                                            <div className={styles.BuyIndividualTextContainer}>
+                                            <p className={styles.BuyTicketCardInfoContentTitle}>Data do Ingresso</p>
+                                            </div>
+                                            <div className={styles.BuyIndividualTextContainer}> 
+                                                <p className={styles.BuyTicketCardInfoContentSubTitle}>22/12/2022</p>
+                                            </div>
+                                        </div>
+                                        <img src="/assets/icons/icon-bottom-arrow-black.png" style={{alignSelf: "center", marginLeft: "auto"}}/> 
+                                    </div>
+                                </div>
                             </div>
                         </div> 
                     </div>
