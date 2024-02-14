@@ -65,8 +65,8 @@ const DefaultTopComponent: React.FC<IDefaultTopComponentProps>= ({ isLoggedIn })
                     {isLoggedIn ? 
                     (   
                         
-                        <div className={styles.LoggedProfileContainerPressed} onClick={handleWithLogout}>
-                            <div className={styles.LoggedProfileContainerPressedHeader}> 
+                        <div className={ profilleButtonExpanded ? styles.LoggedProfileContainerPressed : styles.LoggedProfileContainerNotPressed } onClick={() => setProfilleButtonExpanded(!profilleButtonExpanded)}>
+                            <div className={styles.LoggedProfileContainerPressedHeader} style={profilleButtonExpanded ? {marginTop: 20} : {marginTop: 0}} > 
                                 <img src="/assets/images/profile-image.png"/>
                                 <p className={styles.LoggedProfilleName}>Amanda Merien</p>
                                 <img src="/assets/icons/icon-bottom-arrow-black.png" className={styles.LoggedProfilleBottomArrow}/>

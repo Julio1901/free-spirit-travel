@@ -128,6 +128,10 @@
     flex-direction: row;
 }
 
+.LoggedProfileContainerNotPressed .LogouTextButtonContainer {
+    display: none;
+}
+
 .LoggedProfileContainerPressed {
     display: flex;
     width: 206px;
@@ -135,7 +139,6 @@
     margin-left: 16px;
     align-items: center;
     flex-direction: column;
-    background-color: aqua;
 }
 
 .LoggedProfileContainerPressedHeader {
@@ -143,8 +146,7 @@
     width: 100%;
     height: fit-content;
     flex-direction: row;
-    margin-top: 20px;
-    background-color: beige;
+    align-items: center;
 }
 
 
