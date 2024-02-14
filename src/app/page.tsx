@@ -1,6 +1,6 @@
 'use client'
 
-import { DefaultTopComponent } from "@/components/defaultTopComponent/DefaultTopComponent";
+import DefaultTopComponent from "@/components/defaultTopComponent/DefaultTopComponent";
 import "./styles/home.css"
 import { DefaultSearchComponent } from "@/components/defaultSearchComponent/DefaultSearchComponent";
 import { CardListDestination } from "@/components/cardListDestination/CardListDestination";
@@ -12,7 +12,9 @@ import { TICKETS_LIST_LIMIT } from "@/common/network/paginationLimitValues";
 import { DefaultLateralMenu } from "@/components/defaultLateralMenu/DefaultLateralMenu";
 import { useRouter } from 'next/navigation';
 import Link from "next/link";
-
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import store, { persistor } from "@/redux/store";
 export default function Home() {
 
   const [destinationData, setDestinationData] = useState<ITicket[] | null>(null);
@@ -75,7 +77,9 @@ export default function Home() {
   }
 
   return (
-   <div className="MainContainer">
+    <Provider store={store}>
+         <PersistGate loading={null} persistor={persistor}>
+         <div className="MainContainer">
       <DefaultTopComponent/>
       <DefaultSearchComponent hint="Busque por atração" onSearchClicked={ e => handleSearchClicked(e)}/>
       <div className="BodyContainer">
@@ -112,5 +116,7 @@ export default function Home() {
           
       </div>
    </div>
+         </PersistGate>
+    </Provider>
   );
 }

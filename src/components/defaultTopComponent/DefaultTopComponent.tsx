@@ -2,11 +2,20 @@ import { useEffect, useState } from "react";
 import styles from "./styles.module.css"
 import axios from "axios";
 import { DOLLAR_EXCHANGE_RATE } from "@/common/network/endpoints";
-import { checkIfPriceValueExists, handleWithDollarRattingConverter } from "@/common/utils/priceUtils";
+import { handleWithDollarRattingConverter } from "@/common/utils/priceUtils";
+import { connect, useDispatch } from 'react-redux';
+import { loginSuccess } from "@/redux/actions";
+import { AuthState } from "@/redux/reducer";
 
-export const DefaultTopComponent = () => {
+interface IDefaultTopComponentProps {
+    isLoggedIn: boolean;
+}
+
+
+const DefaultTopComponent: React.FC<IDefaultTopComponentProps>= ({ isLoggedIn }) => {
 
     const [dollarExchangeRate, setdollarExchangeRate] = useState<IDollarExchangeRate | null>(null);
+    const dispatch = useDispatch();
 
     useEffect(() => {
       const fetchData = async () => {
@@ -22,6 +31,10 @@ export const DefaultTopComponent = () => {
       console.log('test')
       console.log(dollarExchangeRate)
     }, []);
+
+    const handleWithLogin = () => {
+     dispatch(loginSuccess());
+    }
 
     return(
         <div className={styles.MainContainer}>
@@ -41,7 +54,11 @@ export const DefaultTopComponent = () => {
                     <div className={styles.PersonIconContainer}>
                         <img src="/assets/images/person-icon.png"/>
                     </div>
-                    <p className={styles.EnterText}>Entrar</p>
+                    {isLoggedIn ? 
+                    ( <p className={styles.EnterText}>Está logado</p>) :
+                    (<p className={styles.EnterText} onClick={handleWithLogin}>Entrar</p>)
+                    }
+                   
                     <div className={styles.ShoppingButtonContainer}>
                         <img src="/assets/images/shop-fill-icon.png"/>
                         <div className={styles.ItemShoppingCounterContainer}>
@@ -53,3 +70,9 @@ export const DefaultTopComponent = () => {
         </div>
     )
 }
+
+const mapStateToProps = (state: AuthState) => ({
+    isLoggedIn: state.isLoggedIn,
+});
+
+export default connect(mapStateToProps)(DefaultTopComponent);
