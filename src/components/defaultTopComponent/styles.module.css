@@ -24,7 +24,7 @@
 
 .RightContentContainer {
     display: flex;
-    width: 453px;
+    width: fit-content;
     height: 50px;
     align-items: center;
     margin-left: auto;
@@ -118,3 +118,71 @@
     height: 600;
     color: #FFFFFF;
 }
+
+.LoggedProfileContainerNotPressed {
+    display: flex;
+    width: 206px;
+    height: 43px;
+    margin-left: 16px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.LoggedProfileContainerPressed {
+    display: flex;
+    width: 206px;
+    height: 83px;
+    margin-left: 16px;
+    align-items: center;
+    flex-direction: column;
+    background-color: aqua;
+}
+
+.LoggedProfileContainerPressedHeader {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    margin-top: 20px;
+    background-color: beige;
+}
+
+
+.LogouTextButtonContainer {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+}
+
+.LogouTextButton {
+    cursor: pointer;
+    font-family: 'CircularSDT';
+    font-size: 18px;
+    height: 450;
+    margin-left: auto;
+    color: #4070F4;
+}
+
+.LoggedProfilleImage {
+    width: 43px;
+    height: 43px;
+    border-radius: 30px;
+}
+
+.LoggedProfilleName {
+    font-family: 'CircularSDT';
+    font-size: 16px;
+    height: 700;
+    margin-left: 10px;
+    white-space: nowrap; 
+    color: #0A2156;
+}
+
+.LoggedProfilleBottomArrow {
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+}
+
+
+
