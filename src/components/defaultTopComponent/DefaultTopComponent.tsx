@@ -65,21 +65,21 @@ const DefaultTopComponent: React.FC<IDefaultTopComponentProps>= ({ isLoggedIn })
                     {isLoggedIn ? 
                     (   
                         
-                        <div className={ profilleButtonExpanded ? styles.LoggedProfileContainerPressed : styles.LoggedProfileContainerNotPressed } onClick={() => setProfilleButtonExpanded(!profilleButtonExpanded)}>
+                        <div className={ profilleButtonExpanded ? styles.LoggedProfileContainerPressed : styles.LoggedProfileContainerNotPressed }>
                             <div className={styles.LoggedProfileContainerPressedHeader} style={profilleButtonExpanded ? {marginTop: 20} : {marginTop: 0}} > 
                                 <img src="/assets/images/profile-image.png"/>
                                 <p className={styles.LoggedProfilleName}>Amanda Merien</p>
-                                <img src="/assets/icons/icon-bottom-arrow-black.png" className={styles.LoggedProfilleBottomArrow}/>
+                                <img src="/assets/icons/icon-bottom-arrow-black.png" className={styles.LoggedProfilleBottomArrow}  onClick={() => setProfilleButtonExpanded(!profilleButtonExpanded)}/>
                             </div>
                             <div className={styles.LogouTextButtonContainer}>
-                                <p className={styles.LogouTextButton}>logout</p>
+                                <p className={styles.LogouTextButton} onClick={handleWithLogout}>logout</p>
                             </div>
                         </div>   
                   
                     ) :
                     (
                         <>
-                            <div className={styles.PersonIconContainer}>
+                            <div className={styles.PersonIconContainer} onClick={handleWithLogin}>
                                 <img src="/assets/images/person-icon.png"/>
                             </div>
                             <p className={styles.EnterText} onClick={handleWithLogin}>Entrar</p>
