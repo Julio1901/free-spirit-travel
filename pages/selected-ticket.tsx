@@ -79,6 +79,40 @@ export default function SelectedTicket(){
                                         <img src="/assets/icons/icon-bottom-arrow-black.png" style={{alignSelf: "center", marginLeft: "auto"}}/> 
                                     </div>
                                 </div>
+                                <div className={styles.Divider}></div>
+                                <div className={styles.BuyTicketCardInfo} style={{marginTop:24}}>
+                                    <img src="/assets/icons/icon-callendar-not-filled.png"/> 
+                                    <div className={styles.BuyTicketCardInfoContent}>
+                                        <div className={styles.BuyTicketTextContainer}>
+                                            <div className={styles.BuyIndividualTextContainer}>
+                                            <p className={styles.BuyTicketCardInfoContentTitle}>Ingressos</p>
+                                            </div>
+                                            <div className={styles.BuyIndividualTextContainer}> 
+                                                <p className={styles.BuyTicketCardInfoContentSubTitle}>03 Ingressos</p>
+                                            </div>
+                                        </div>
+                                        <img src="/assets/icons/icon-bottom-arrow-black.png" style={{alignSelf: "center", marginLeft: "auto"}}/> 
+                                    </div>
+                                </div>
+                                <div className={styles.Divider}></div>
+                                <div className={styles.BuyResumeContainer}>
+                                    <div className={styles.BuyResumeContentContainer}>
+                                        <p>01 Ingresso infantil</p>
+                                        <p className={styles.BuyResumeContentPrice}>R$245,99</p>
+                                    </div>
+                                    <div className={styles.BuyResumeContentContainer}>
+                                        <p>02 Ingressos Adultos</p>
+                                        <p className={styles.BuyResumeContentPrice}>R$245,99</p>
+                                    </div>
+                                </div>
+                                <div className={styles.Divider}></div>
+                                <div className={styles.BuyResumePriceContainer}>
+                                    <p className={styles.BuyResumePriceTitle}>Valor total</p>
+                                    <p className={styles.BuyResumePriceText}>R$ 1.391,28</p>
+                                </div>
+                                <div className={styles.BuyButton}>
+                                    <p>Comprar Ingresso</p>
+                                </div>
                             </div>
                         </div> 
                     </div>

@@ -213,9 +213,10 @@
     display: flex;
     width: 353px;
     height: 473px;
+    flex-direction: column;
     margin-left: 38px;
     border-radius: 8px;
-    justify-content: center;
+    align-items: center;
     background-color: #FFFFFF;
 }
 
@@ -262,12 +263,93 @@
     color: #0A2156;
 }
 
-.BuyTicketCardInfoContentSubTitle{
+.BuyTicketCardInfoContentSubTitle {
     font-family: 'CircularSDT';
     font-size: 16px; 
     font-weight: 450;
     color: #9EA5B8;
 }
+
+.Divider {
+    width: 305px;
+    height: 1px;
+    margin-top: 24px;
+    background-color: #E7E9ED;
+}
+
+.BuyResumeContainer {
+    display: flex;
+    width: 305px;
+    height: 57px;
+    margin-top: 24px;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.BuyResumeContentContainer {
+    display: flex;
+    width: 305px;
+    height: 22px;
+    align-items: center;
+}
+
+.BuyResumeContentContainer p {
+    font-family: 'CircularSDT';
+    font-size: 16px; 
+    font-weight: 450;
+    color: #9EA5B8;
+}
+
+.BuyResumeContentPrice {
+    font-family: 'CircularSDT';
+    font-size: 16px; 
+    font-weight: 450;
+    color: #9EA5B8;
+    margin-left: auto;
+}
+
+.BuyResumePriceContainer {
+    display: flex;
+    width: 305px;
+    height: 30px;
+    margin-top: 24px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.BuyResumePriceTitle {
+    font-family: 'CircularSDT';
+    font-size: 16px; 
+    font-weight: 700;
+    color: #0A2156;
+}
+
+.BuyResumePriceText {
+    font-family: 'CircularSDT';
+    font-size: 24px; 
+    font-weight: 700;
+    margin-left: auto;
+    color: #4070F4;
+}
+
+.BuyButton {
+    display: flex;
+    width: 305px;
+    height: 58px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    border-radius: 4px;
+    background-color: #4070F4;
+}
+
+.BuyButton p {
+    font-family: 'CircularSDT';
+    font-size: 17px; 
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
 
 
 
