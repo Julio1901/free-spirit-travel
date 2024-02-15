@@ -5,9 +5,18 @@ import DefaultTopComponent from "@/components/defaultTopComponent/DefaultTopComp
 import { Provider } from "react-redux";
 import { PersistGate } from 'redux-persist/integration/react';
 import store, { persistor } from "@/redux/store";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 export default function SelectedTicket(){
-    
+
+
+    const router = useRouter();
+    const { ticketName } = router.query;
+
+    console.log('test navigation')
+    console.log(ticketName)
+
     return(
         <Provider store={store}>
              <PersistGate loading={null} persistor={persistor}>
