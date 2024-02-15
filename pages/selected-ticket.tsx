@@ -7,15 +7,40 @@ import { PersistGate } from 'redux-persist/integration/react';
 import store, { persistor } from "@/redux/store";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import axios from "axios";
+import { TICKETS_ENDPOIN } from "@/common/network/endpoints";
+import { TICKETS_LIST_LIMIT } from "@/common/network/paginationLimitValues";
 
 export default function SelectedTicket(){
 
-
+    const [destinationData, setDestinationData] = useState<ITicket | null>(null);
     const router = useRouter();
     const { ticketName } = router.query;
 
-    console.log('test navigation')
-    console.log(ticketName)
+    const makeTicketRequest = () => {
+
+        if (ticketName === undefined) {
+            return
+        }
+        
+        let params = {
+            search: ticketName,
+            limit: TICKETS_LIST_LIMIT
+        }
+        const fetchData = async () => {
+            try {
+                const response = await axios.get<ITicket[]>(TICKETS_ENDPOIN, { params });
+                setDestinationData(response.data[0]);
+            } catch (error) {
+                console.error('Erro ao buscar dados:', error);
+            }
+        };
+        fetchData();
+      }
+    
+      useEffect(() => {
+        makeTicketRequest()
+      }, [ticketName]);
 
     return(
         <Provider store={store}>
@@ -27,16 +52,16 @@ export default function SelectedTicket(){
                             <img src="/assets/icons/icon-arrow-back.png"/> 
                             <div className={styles.TitleAndDescriptionContainer}>
                                 <div className={styles.TitleContentContainer}>
-                                    <p>Lorem ipsum dolor amet consectetur</p>
+                                    <p>{destinationData?.name}</p>
                                 </div>
                                 <div className={styles.LocationContainer}>
                                     <img src="/assets/images/map-icon.png" />
-                                    <p>GetYourGuide Tours & Tickets GmbH</p>
+                                    <p>{destinationData?.location}</p>
                                 </div>
                             </div>
                           
                         </div> 
-                        <div className={styles.ImageContainer} style={{backgroundImage: `url('https://i.postimg.cc/zD6RYYc7/museu-de-arte.jpg')`}}>
+                        <div className={styles.ImageContainer} style={{backgroundImage: `url(${destinationData?.image})`}}>
                             <div className={styles.DisplayMorePictureButton}>
                                 <p>Visualizar mais fotos</p>
                             </div>
@@ -46,10 +71,10 @@ export default function SelectedTicket(){
                                 <div className={styles.InfosHeaderContainer}>
                                     <div className={styles.ReviewsConteiner}>
                                         <div className={styles.ReviewNoteContainer}>
-                                            <p>6.3</p>
+                                            <p>{destinationData?.rating.value}</p>
                                         </div>
                                         <p className={styles.ReviewDescription}>Excellent</p>
-                                        <p className={styles.ReviewsCounter}>(423 Reviews)</p>
+                                        <p className={styles.ReviewsCounter}>({destinationData?.rating.reviewsCount} Reviews)</p>
                                     </div>
                                     <div className={styles.CommodityContainer}>
                                         <img src="/assets/icons/icon-ticket.png"/> 
@@ -63,11 +88,7 @@ export default function SelectedTicket(){
                                     </div>
                                     <div className={styles.ContentContainer}>
                                         <p className={styles.ContentContainerTitle}>Sobre o Ingresso selecionado:</p>
-                                        <p className={styles.ContentContainerDescription}>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices feugiat volutpat elementum sed donec bibendum vitae tincidunt. Quis eget ornare amet massa eu at ipsum. Augue purus ante ultrices dictum integer sagittis sem leo. 
-                                        Maecenas suspendisse ipsum purus bibendum maecenas faucibus risus, semper. Aliquet potenti neque semper dui aliquet. Imperdiet lectus id sed pharetra nunc, proin. Ultrices varius rhoncus facilisi condimentum habitant rhoncus ac. 
-                                        Vivamus varius gravida urna viverra in. Aliquet amet dictum malesuada sapien morbi est interdum. Tincidunt nunc convallis nullam lorem eu elementum interdum. Ut ultrices suscipit dolor lorem consequat ac nibh justo. Viverra quam nunc risus urna. Pharetra vestibulum diam praesent consequat consequat fermentum nunc.
-                                        </p>
+                                        <p className={styles.ContentContainerDescription}>{destinationData?.description}</p>
                                         <p className={styles.ContentContainerTitle} style={{marginTop: 24}}>Localização</p>
                                         <img src="/assets/images/map-image.png" className={styles.LocationMap}/> 
                                     </div>
@@ -117,7 +138,7 @@ export default function SelectedTicket(){
                                 <div className={styles.Divider}></div>
                                 <div className={styles.BuyResumePriceContainer}>
                                     <p className={styles.BuyResumePriceTitle}>Valor total</p>
-                                    <p className={styles.BuyResumePriceText}>R$ 1.391,28</p>
+                                    <p className={styles.BuyResumePriceText}>R$ {destinationData?.price.discount}</p>
                                 </div>
                                 <div className={styles.BuyButton}>
                                     <p>Comprar Ingresso</p>
