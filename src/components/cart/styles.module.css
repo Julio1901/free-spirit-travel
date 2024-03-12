@@ -131,4 +131,94 @@
     color: #0A1E31;
 }
 
+.BodyContainer {
+    display: flex;
+    width:  446px;
+    height: 199px;
+    flex-direction: column;
+    margin: 24px;
+    background-color: aqua;
+}
 
+.BodyTextsContainer {
+    display: flex;
+    width: 446px;
+    height: 121px;
+    flex-direction: column;
+    gap: 14px;
+    background-color: yellow;
+}
+
+.BodyContentContainer {
+    display: flex;
+    width: auto;
+    height: 19px;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: brown;
+}
+
+.BodyContainerTextNormal {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    height: 400;
+    color: #A2A4B1;
+}
+
+.BodyContainerTextBold {
+    font-family: 'CircularSDT';
+    font-size: 16px; 
+    font-weight: 700;
+    color: #0A2156;
+}
+
+.BodyContainerDiscountText {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    height: 600;
+    color: #00919E;
+}
+
+.TotalValueContainer{
+    display: flex;
+    width: auto;
+    height: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    background-color: chartreuse;
+}
+
+.TotalValueContainerText {
+    font-family: 'CircularSDT';
+    font-size: 16px; 
+    font-weight: 700;
+    color: #0A2156;
+}
+
+.TotalValueContainerPriceText {
+    font-family: 'Roboto';
+    font-size: 24px; 
+    font-weight: 400;
+    color: #4070F4;
+}
+
+.GoToCheckOutButtonContainer {
+    display: flex;
+    width: 443px;
+    height: 56px;
+    margin-top: 24px;
+    border-radius: 6px;
+    margin-inline: 25.5px;
+    align-items: center;
+    justify-content: center;
+    background-color: #0045F3;
+}
+
+.GoToCheckOutButtonText {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    height: 600;
+    color: #FFFFFF;
+}
