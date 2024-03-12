@@ -30,7 +30,7 @@ export default function Cart(){
                     </div>
                 </div>
             </div>
-           
+           <div className={styles.Divider} style={{marginInline: 24}}/>
         </div>
     )
 }
