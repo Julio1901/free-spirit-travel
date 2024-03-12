@@ -16,7 +16,7 @@ export default function Cart(){
                             <p className={styles.TopContentContainerBodyPricesText}>1 Adulto: R$500,00</p>
                             <p className={styles.TopContentContainerBodyPricesText}>2 Crianças: R$234,330</p>
                         </div>
-                        <div className={styles.Divider} style={{marginTop: 8}}/>
+                       <div className={styles.Divider} style={{marginTop: 8}}/>
                         <div className={styles.QuantityPurchasedContainer}>
                             <p className={styles.QuantityPurchasedContainerTotalText}>Qtd 02</p>
                             <p className={styles.QuantityPurchasedContainerTotalText}>R$ 3.999,00</p>
@@ -30,6 +30,7 @@ export default function Cart(){
                     </div>
                 </div>
             </div>
+           
         </div>
     )
 }

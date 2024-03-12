@@ -32,7 +32,6 @@
 }
 
 .TopContentContainerBodyTextsContainer {
-    display: flex;
     width: 371px;
     height: 98px;
     margin-left: auto;
@@ -68,8 +67,8 @@
     width: auto;
     height: 1px;
     background-color: #E7E9ED;
-    opacity: 0.5;
 }
+
 
 .QuantityPurchasedContainer {
     display: flex;
