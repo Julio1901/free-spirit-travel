@@ -12,6 +12,7 @@
     background-color: #FFFFFF;
 }
 
+
 .TopContentContainer {
     width: 446px;
     height: 171px;
@@ -22,7 +23,8 @@
     font-size: 16px;
     font-family: 'Inter', sans-serif;
     height: 600;
-    margin-top: 4px;
+    margin-top: 28px;
+    margin-inline: 24px;
     color: #0A1E31;
 }
 

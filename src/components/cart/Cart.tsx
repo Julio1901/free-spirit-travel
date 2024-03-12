@@ -8,10 +8,13 @@ const Cart: React.FC<ICartProps> = ({items}) => {
     return (
         <div className={styles.MainContainer}>
             {items.length !== 0 ? 
-                (<>
+                (
+                
+                <>
+                  <p className={styles.Title}>Ingressos</p>
                 {items.map((item) => (
                 <><div className={styles.TopContentContainer}>
-                        <p className={styles.Title}>Ingressos</p>
+                      
                         <div className={styles.TopContentContainerBody}>
                             <img src="/assets/images/profile-image.png" />
                             <div className={styles.TopContentContainerBodyTextsContainer}>
@@ -64,6 +67,8 @@ const Cart: React.FC<ICartProps> = ({items}) => {
                             </div>
                         </div>
                         </>
+
+                        
                 ))}
                          <div className={styles.GoToCheckOutButtonContainer}>
                             <p className={styles.GoToCheckOutButtonText}>Ir para o check out</p>
