@@ -3,10 +3,12 @@
     position: absolute;
     width: 494px;
     height: 550px;
+    max-height: 550px;
     top: 107px;
     right: 56px;
     flex-direction: column;
     align-items: center; 
+    overflow-y: scroll;
     background-color: #FFFFFF;
 }
 
@@ -202,6 +204,7 @@
     width: 443px;
     height: 56px;
     margin-top: 24px;
+    margin-bottom: 28px;
     border-radius: 6px;
     margin-inline: 25.5px;
     align-items: center;
