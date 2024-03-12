@@ -9,14 +9,12 @@ const Cart: React.FC<ICartProps> = ({items}) => {
         <div className={styles.MainContainer}>
             {items.length !== 0 ? 
                 (
-                
                 <>
                   <p className={styles.Title}>Ingressos</p>
                 {items.map((item) => (
                 <><div className={styles.TopContentContainer}>
-                      
                         <div className={styles.TopContentContainerBody}>
-                            <img src="/assets/images/profile-image.png" />
+                            <img src={item.image} />
                             <div className={styles.TopContentContainerBodyTextsContainer}>
                                 <div className={styles.TopContentContainerBodyTextsContainerHeader}>
                                     <p className={styles.TicketTitle}>Ingresso Universal 2 park to 2 dias flexivel - 15/09/2022</p>
