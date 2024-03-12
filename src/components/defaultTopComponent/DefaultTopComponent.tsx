@@ -42,9 +42,6 @@ const DefaultTopComponent: React.FC<IDefaultTopComponentProps>= ({ isLoggedIn })
         dispatch(logout());
     }
 
-    const handleWithProfillerButtonClicked = () => {
-
-    }
 
     return(
         <div className={styles.MainContainer}>

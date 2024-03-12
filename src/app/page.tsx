@@ -10,15 +10,19 @@ import { TICKETS_ENDPOIN } from "@/common/network/endpoints";
 import { PaginationComponent } from "@/components/paginationComponent/PaginationComponent";
 import { TICKETS_LIST_LIMIT } from "@/common/network/paginationLimitValues";
 import { DefaultLateralMenu } from "@/components/defaultLateralMenu/DefaultLateralMenu";
-import { useRouter } from 'next/navigation';
-import Link from "next/link";
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import store, { persistor } from "@/redux/store";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import Cart from "@/components/cart/Cart";
+
+
 export default function Home() {
 
   const [destinationData, setDestinationData] = useState<ITicket[] | null>(null);
   const [page, setPage] = useState(1)
+  const [ticket, setTicket] = useState<ITicket | null>(null);
 
   const router = useRouter();
 
@@ -29,14 +33,14 @@ export default function Home() {
        params = {
         page: page,
         limit: TICKETS_LIST_LIMIT
-      };
-      console.log('test')
+      }
+
     }
     else{
        params = {
         search: ticketName,
         limit: TICKETS_LIST_LIMIT
-      };
+      }
     }
     
     const fetchData = async () => {
@@ -71,42 +75,89 @@ export default function Home() {
     setPage(Number(page))
   }
 
-  const handleWithTicketClick = () => {
-    console.log("Clicked")
-    router.push('/ticket-detail');
+  const handleWithTicketClick = (destination: ITicket) => {
+    setTicket(destination)
+    router.push(
+      '/selected-ticket'
+    );
   }
+
+
+
+const mock = [
+
+    {
+      "id": "1",
+      "name": "Museu de Arte Moderna",
+      "location": "Rio de Janeiro, RJ",
+      "image": "https://i.postimg.cc/zD6RYYc7/museu-de-arte.jpg",
+      "description": "O Museu de Arte Moderna é um espaço cultural dedicado à exibição de obras de arte moderna e contemporânea, destacando-se pela diversidade de artistas e estilos.",
+      "price": {
+        "full": 2351.28,
+        "discount": 1391.28
+      },
+      "rating": {
+        "reviewsCount": 345,
+        "value": 4.3
+      },
+      "createdAt": "2022-08-31T12:32:09.794Z",
+      "updatedAt": "2022-08-31T12:32:09.794Z"
+    },
+    {
+      "id": "2",
+      "name": "Torre Eiffel",
+      "location": "Paris, França",
+      "image": "https://i.postimg.cc/JhFkqsSN/torre-eiffel.jpg",
+      "description": "A Torre Eiffel é um ícone da arquitetura mundial, situada em Paris, oferecendo uma vista deslumbrante da cidade luz a partir de seus diferentes níveis.",
+      "price": {
+        "full": 2351.28,
+        "discount": 1391.28
+      },
+      "rating": {
+        "reviewsCount": 345,
+        "value": 4.3
+      },
+      "createdAt": "2022-08-31T12:32:09.794Z",
+      "updatedAt": "2022-08-31T12:32:09.794Z"
+    }
+]
 
   return (
     <Provider store={store}>
          <PersistGate loading={null} persistor={persistor}>
          <div className="MainContainer">
       <DefaultTopComponent/>
+      <Cart items={mock}/>
       <DefaultSearchComponent hint="Busque por atração" onSearchClicked={ e => handleSearchClicked(e)}/>
       <div className="BodyContainer">
         <div className="LateralMenuContainer">
           <DefaultLateralMenu/>
         </div>
         <div className="DestinationListConainer">
-        <ul>
-        {destinationData?.map((destination, index) => (
-          <li key={index}>
-            <Link
-              href='selected-ticket'
-             >
-
-            <CardListDestination
-              name={destination.name}
-              image={destination.image}
-              location={destination.location}
-              description={destination.description}
-              price={destination.price}
-              rating={destination.rating}
-            />
-            </Link>
-           
-          </li>
-        ))}
-        </ul>
+          <ul>
+            {destinationData?.map((destination, index) => (
+              <Link href={
+                {pathname: '/selected-ticket',
+                query: {
+                  ticketName: destination.name
+                }
+                }
+              }>
+                <li key={index}>
+                  <CardListDestination
+                    name={destination.name}
+                    image={destination.image}
+                    location={destination.location}
+                    description={destination.description}
+                    price={destination.price}
+                    rating={destination.rating}
+                  />
+            
+                  </li>
+              </Link>
+          
+            ))}
+          </ul>
         </div>
       </div>
       <div className="FootContainer">
