@@ -18,13 +18,16 @@ export default function Cart(){
                         </div>
                        <div className={styles.Divider} style={{marginTop: 8}}/>
                         <div className={styles.QuantityPurchasedContainer}>
+                        <div className={styles.QuantityPurchasedContentContainer}>
                             <p className={styles.QuantityPurchasedContainerTotalText}>Qtd 02</p>
                             <p className={styles.QuantityPurchasedContainerTotalText}>R$ 3.999,00</p>
                         </div>
-                        <div className={styles.QuantityPurchasedContainer}>
+                        <div className={styles.QuantityPurchasedContentContainer}>
                             <p className={styles.QuantityPurchasedContainerSubtotalText}>Subtotal</p>
                             <p className={styles.QuantityPurchasedContainerSubtotalTextValue}>R$ 1.468,60</p>
                         </div>
+                        </div>
+                     
 
 
                     </div>
