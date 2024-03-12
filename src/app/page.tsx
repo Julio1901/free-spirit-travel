@@ -15,6 +15,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import store, { persistor } from "@/redux/store";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Cart from "@/components/cart/Cart";
 
 
 export default function Home() {
@@ -86,6 +87,7 @@ export default function Home() {
          <PersistGate loading={null} persistor={persistor}>
          <div className="MainContainer">
       <DefaultTopComponent/>
+      <Cart/>
       <DefaultSearchComponent hint="Busque por atração" onSearchClicked={ e => handleSearchClicked(e)}/>
       <div className="BodyContainer">
         <div className="LateralMenuContainer">

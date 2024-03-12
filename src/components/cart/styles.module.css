@@ -1,0 +1,133 @@
+
+.MainContainer {
+    display: flex;
+    position: absolute;
+    width: 494px;
+    height: 550px;
+    top: 107px;
+    right: 56px;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+
+.TopContentContainer {
+    width: 446px;
+    height: 171px;
+    margin-top: 24px;
+    background-color: blueviolet;
+}
+
+.TopContentContainerBody {
+    display: flex;
+    width: auto;
+    height: 98px;
+    flex-direction: row;
+    background-color: blue;
+}
+
+.TopContentContainerBody img {
+    width: 57px;
+    height: 62px;
+    background-color: aquamarine;
+}
+
+.TopContentContainerBodyTextsContainer {
+    display: flex;
+    width: 371px;
+    height: 98px;
+    margin-left: auto;
+    flex-direction: column;
+    background-color: yellow;
+}
+
+.TopContentContainerBodyTextsContainerHeader {
+    display: flex;
+    width: auto;
+    height: 38px;
+    flex-direction: row;
+    background-color: aqua;
+
+}
+
+.TopContentContainerBodyPricesTextContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    gap: 8px;
+    background-color:  orange;
+}
+
+.TopContentContainerBodyPricesText{
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    height: 400;
+    color: #989AA7;
+}
+
+.Divider {
+    width: auto;
+    height: 1px;
+    background-color: #E7E9ED;
+    opacity: 0.5;
+}
+
+.QuantityPurchasedContainer {
+    display: flex;
+    width: auto;
+    height: 19px;
+    margin-top: 8px;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: brown;
+}
+
+.QuantityPurchasedContainerTotalText {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    height: 400;
+    color: #646981;
+}
+
+.QuantityPurchasedContainerSubtotalText {
+    font-family: 'CircularSDT';
+    font-size: 16px; 
+    font-weight: 700;
+    color: #0A2156;
+}
+
+.QuantityPurchasedContainerSubtotalTextValue{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    height: 600;
+    color: #17191C;
+}
+
+.QuantityContainer p {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    height: 400;
+    color: #989AA7;
+}
+
+
+.TopContentContainerBodyTextsContainer img {
+    width: 17px;
+    height: 17px;
+}
+
+.TicketTitle {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    height: 400;
+    color: #646981;
+}
+
+
+.Title {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    height: 600;
+    margin-top: 4px;
+    color: #0A1E31;
+}
+
